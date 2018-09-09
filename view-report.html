@@ -1,0 +1,66 @@
+<div data-page="view_report" class="page">
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="navbar navbar-fixed">
+        <div class="navbar-inner">
+            <div class="left">
+                &nbsp;<a href="#" class="back link back-link">
+                <i class="icon icon-back"></i><span></span>
+            </a>
+            </div>
+            <div class="center">{{url_query.name}} Report</div>            
+        </div>
+    </div>
+    <div class="page-content">        
+        <div class="content-block main-cat hides">
+            <div class="content-block-title">Progress Report</div>
+            <h4>Student Name</h4>
+            <p>
+                {{url_query.name}}
+            </p>
+
+            <h4>Matric Number</h4>
+            <p>
+                {{url_query.matric}}
+            </p>
+
+            <h4>Week</h4>
+            <p>
+                {{url_query.week}}
+            </p>
+
+            <h4>Week Rating</h4>
+            <p id="ratings_p">
+                {{url_query.ratings}}
+            </p>
+
+
+            <h3 class="center">Apply / Change Rating</h3>
+            <form action="" method="post" id="ratings_form" onsubmit="return false;">
+                <div class="list-block inputs-list">
+                    <ul>
+                        <li class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">New Rating</div>
+                                <div class="item-input">
+                                    <select name="ratings" id="the_rating" required="">
+                                        <option>Excellent</option>
+                                        <option>Good</option>
+                                        <option>Average</option>
+                                        <option>Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <input type="submit" name="submit" class="button button-fill button-raised" value="Apply Rating">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+</div>
